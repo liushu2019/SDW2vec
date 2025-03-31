@@ -17,21 +17,21 @@ Edgelist of a signed network, 3 columns (node1 node2 weight). wight \in R.
 For undirected networks, 
 ## Parameters
 
---input: Input graph path (default: 'star_weighted.edgelist')
---output: Output embedding path (default: None, follows input file name if not given)
---dimensions: Number of dimensions (default: 128)
---signed: Flag for signed network (action: store_true)
---directed: Flag for directed network (action: store_true)
---walk-length: Length of walk per source (default: 80)
---num-walks: Number of walks per source (default: 20)
---window-size: Context size for optimization (default: 10)
---until-layer: Calculation until the layer. Only work for OPT3 mode (default: 6)
---iter: Number of epochs in SGD (default: 5)
---workers: Number of parallel workers (default: 8)
---OPT3: Optimization flag to control the max layer to until-layer (action: store_true)
---rescale: Type of weight rescaling function (default: 'auto', options: 'auto', 'cut', 'qcut')
---num-bins: Number of bins to rescale weights (default: 0, applies best search for 0)
---suffix: Log file and pickles folder suffix (default: 'TEST')
+--input: Input graph path (default: 'star_weighted.edgelist')\
+--output: Output embedding path (default: None, follows input file name if not given)\
+--dimensions: Number of dimensions (default: 128)\
+--signed: Flag for signed network (action: store_true)\
+--directed: Flag for directed network (action: store_true)\
+--walk-length: Length of walk per source (default: 80)\
+--num-walks: Number of walks per source (default: 20)\
+--window-size: Context size for optimization (default: 10)\
+--until-layer: Calculation until the layer. Only work for OPT3 mode (default: 6)\
+--iter: Number of epochs in SGD (default: 5)\
+--workers: Number of parallel workers (default: 8)\
+--OPT3: Optimization flag to control the max layer to until-layer (action: store_true)\
+--rescale: Type of weight rescaling function (default: 'auto', options: 'auto', 'cut', 'qcut')\
+--num-bins: Number of bins to rescale weights (default: 0, applies best search for 0)\
+--suffix: Log file and pickles folder suffix (default: 'TEST')\
   
 ## Command example
 	python src/main.py --input graph/star_weighted.edgelist --output star_weighted --num-walks 100 --walk-length 80 --window-size 5 --dimensions 2 --until-layer 5 --workers 1 --OPT3 --rescale auto --num-bins 0 --suffix star  --directed --signed
@@ -46,5 +46,5 @@ For undirected networks,
   For hypergraphs structural embedding, see [HyperS2V](https://arxiv.org/pdf/2311.04149).
 
   All of these codes could be found in my Github.
-  
+
   We would like to thank Leonardo F. R. Ribeiro et al., authors of struc2vec, for providing their code.
