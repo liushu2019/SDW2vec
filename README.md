@@ -5,10 +5,10 @@ SDW2vec learns the embeddings for nodes based on the structural features (degree
 
 # Installation
 Tested with Python 3.10 and the following packages needed: 
-	pip install futures==3.0.5
-	pip install fastdtw==0.3.4
-	pip install gensim==4.3.2
-	pip install numpy==1.24.4
+	pip install futures==3.0.5\
+	pip install fastdtw==0.3.4\
+	pip install gensim==4.3.2\
+	pip install numpy==1.24.4\
 	pip install scipy==1.11.3
 
 # Usage
@@ -31,7 +31,7 @@ For undirected networks,
 --OPT3: Optimization flag to control the max layer to until-layer (action: store_true)\
 --rescale: Type of weight rescaling function (default: 'auto', options: 'auto', 'cut', 'qcut')\
 --num-bins: Number of bins to rescale weights (default: 0, applies best search for 0)\
---suffix: Log file and pickles folder suffix (default: 'TEST')\
+--suffix: Log file and pickles folder suffix (default: 'TEST')
   
 ## Command example
 	python src/main.py --input graph/star_weighted.edgelist --output star_weighted --num-walks 100 --walk-length 80 --window-size 5 --dimensions 2 --until-layer 5 --workers 1 --OPT3 --rescale auto --num-bins 0 --suffix star  --directed --signed
