@@ -4,7 +4,7 @@ Code for paper titled as "SDW2vec: Learning Structural Representations of Nodes 
 SDW2vec learns the embeddings for nodes based on the structural features (degrees and edge properties). SDW2vec is capable for weighted networks, signed networks, directed networks.
 
 # Installation
-Tested with Python 3.10 and the following packages needed: 
+Tested with Python 3.10 and the following packages needed: \
 	pip install futures==3.0.5\
 	pip install fastdtw==0.3.4\
 	pip install gensim==4.3.2\
